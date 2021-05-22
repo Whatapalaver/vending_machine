@@ -9,7 +9,7 @@ class Inventory
   attr_reader :stock, :price_list
 
   def initialize(price_list = PRICE_LIST, qty = DEFAULT_CAPACITY)
-    @price_list =price_list
+    @price_list = price_list
     product_list = generate_products
     @stock = generate_stock(product_list, qty)
   end
@@ -17,7 +17,6 @@ class Inventory
   def total_products
     stock.values.reduce(0) { |memo, elem| memo + elem[:qty] }
   end
-
 
   private
 
