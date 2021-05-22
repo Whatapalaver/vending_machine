@@ -1,8 +1,8 @@
 require 'cash_handler'
 
 describe CashHandler do
-  denoms = { "1p" => 1, "2p" => 2, "5p" => 5}
-  let(:cash_handler) { described_class.new(denominations = denoms) }
+  denoms = { '1p' => 1, '2p' => 2, '5p' => 5 }
+  let(:cash_handler) { described_class.new(denoms) }
 
   describe '#initialize' do
     it 'generates a kitty' do

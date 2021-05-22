@@ -1,8 +1,8 @@
 require 'inventory'
 
 describe Inventory do
-  crisp_price_list = [{sku: 'sv', name: 'Salt & Vinegar', price: 75}]
-  let(:empty_crisp_inv) { described_class.new(price_list = crisp_price_list) }
+  crisp_price_list = [{ sku: 'sv', name: 'Salt & Vinegar', price: 75 }]
+  let(:empty_crisp_inv) { described_class.new(crisp_price_list) }
 
   describe '#initialize' do
     it 'generates a stock list' do
