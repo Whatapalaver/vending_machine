@@ -18,6 +18,22 @@ class Inventory
     stock.values.reduce(0) { |memo, elem| memo + elem[:qty] }
   end
 
+  def listed?(sku)
+    stock.key?(sku)
+  end
+
+  def in_stock?(sku)
+    if listed?(sku)
+      stock[sku][:qty].positive?
+    else
+      false
+    end
+  end
+
+  def reduce_by_one(sku)
+    stock[sku][:qty] -= 1
+  end
+
   private
 
   # Using Struct rather than new class initially as I only want to access attributes

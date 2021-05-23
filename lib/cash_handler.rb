@@ -31,5 +31,4 @@ class CashHandler
       [coin[:face], { qty: qty, face: coin[:face], pence: coin[:pence] }]
     end.to_h
   end
-
 end
