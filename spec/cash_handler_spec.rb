@@ -20,4 +20,9 @@ describe CashHandler do
       expect(two_pence[:pence]).to eq 2
     end
   end
+
+  it 'calculates change in coin denomination' do
+    expected_change = [{5=>5},{2=>2},{1=>0}]
+    expect(cash_handler.return_coins(29)).to eq expected_change
+  end
 end

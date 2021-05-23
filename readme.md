@@ -32,8 +32,9 @@ A customer can now select and pay for the item and providing they pay the going 
 
 ### Issues with my code
 
-- My test coverage is not good. Testing `puts` and `gets` methods is troublesome and I decided not to spend my time learning how to do this.
-- I am requesting that my customer enters a payment value but I need to implement a coin entry system so I can keep track of total coins and incrment them as I make sales.
+- My test coverage is not good. Testing `puts` and `gets` methods is troublesome and I decided not to spend my time learning how to do this, preferring to add functionality.
+- I am requesting that my customer enters a payment value but I need to implement a coin entry system so I can keep track of total coins and increment them as I make sales.
+- I have included a greedy algorythm approach to generating the coins to return as change but haven't 'wired it together' yet.
 - I need to add a more graceful way to exit the program than `CTRL C` but I wanted to leave the machine running, ready to accept further vend requests.
 - I have not addded maintenance functionality for loading products and coins yet
 - I wonder whether a Customer (or Transaction) class may be useful to keep track of the current selection and the coins entered for the vend.

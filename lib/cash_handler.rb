@@ -17,6 +17,18 @@ class CashHandler
     kitty.values.reduce(0) { |memo, elem| memo + elem[:qty] * elem[:pence] }
   end
 
+  def return_coins(change_reqd)
+    coin_vals = denominations.values.sort.reverse
+    change = []
+    total_coins = 0
+    coin_vals.each do |coin_val|
+      qty = (change_reqd / coin_val).floor
+      change_reqd -= qty * coin_val
+      change << {coin_val => qty}
+    end
+    change
+  end
+
   private
 
   # Using Struct rather than new class initially as I only want to access attributes
